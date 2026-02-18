@@ -144,9 +144,14 @@ const Execome = () => {
         </div>
 
         {/* Students */}
-        <h3 className="text-2xl font-semibold text-[#003B5C] mb-8">
+        <h3 className="text-3xl flex font-bold text-[#003B5C]">
           Student Committee
         </h3>
+        {/* Accent + Divider Line */}
+          <div className="relative mt-4">
+            <div className="w-full h-[2px] bg-gray-300"></div>
+            <div className="absolute top-0 left-0 w-24 h-[2px] bg-[#FF7D32]"></div>
+          </div>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {studentMembers.map((member, i) => (
             <MemberCard key={i} member={member} isFaculty={false} />

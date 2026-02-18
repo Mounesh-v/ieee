@@ -172,6 +172,12 @@ export default function PhotonCatcher() {
           >
             Continue
           </button>
+          <button
+            onClick={handleExit}
+            className="px-8 py-3 bg-red-500 text-black rounded-xl text-lg hover:bg-red-300 transition"
+          >
+            Exit
+          </button>
         </div>
       )}
 
