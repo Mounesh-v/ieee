@@ -107,13 +107,31 @@ const Projects = () => {
     },
   ];
 
+  const [cardsPerSlide, setCardsPerSlide] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerSlide(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsPerSlide(2);
+      } else {
+        setCardsPerSlide(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const groupedSlides = useMemo(() => {
     const groups = [];
-    for (let i = 0; i < featuredProjects.length; i += 3) {
-      groups.push(featuredProjects.slice(i, i + 3));
+    for (let i = 0; i < featuredProjects.length; i += cardsPerSlide) {
+      groups.push(featuredProjects.slice(i, i + cardsPerSlide));
     }
     return groups;
-  }, [featuredProjects]);
+  }, [featuredProjects, cardsPerSlide]);
 
   const totalSlides = groupedSlides.length;
 
@@ -124,29 +142,11 @@ const Projects = () => {
   const prevSlide = () => {
     setCarouselIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
-
-  //   useEffect(() => {
-  //     startAutoScroll();
-  //     return stopAutoScroll;
-  //   }, []);
-
-  //   const stopAutoScroll = () => {
-  //     if (autoScrollRef.current) {
-  //       clearInterval(autoScrollRef.current);
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     startAutoScroll();
-
-  //     return () => stopAutoScroll();
-  //   }, [carouselIndex]);
-
   const startAutoScroll = () => {
-    stopAutoScroll(); // clear old interval first
+    stopAutoScroll(); 
     autoScrollRef.current = setInterval(() => {
       nextSlide();
-    }, 4000); // 4 seconds
+    }, 3000);
   };
 
   const stopAutoScroll = () => {
@@ -160,22 +160,22 @@ const Projects = () => {
       {/* PROJECTS SECTION */}
       <section className="bg-[#f9f9f9] pt-[60px] pb-10 px-5 text-center">
         <div className="bg-[#f8f9fa] py-10 border-b border-[#e0e0e0]">
-          <h2 className="text-[2.8rem] font-bold text-[#0a1d4f] mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-[#0a1d4f] mb-2">
             OUR PROJECTS
           </h2>
-          <p className="text-[#555] mb-8 text-[18px]">
+          <p className="text-[#555] mb-8 text-base sm:text-lg">
             Explore the innovative works driven by our student community.
           </p>
 
           {/* Controls */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 items-center">
             <input
               type="text"
               placeholder="Search projects..."
-              className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg min-w-[200px] focus:border-[#007bff] focus:outline-none"
+              className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none"
             />
 
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg min-w-[200px] focus:border-[#007bff] focus:outline-none">
+            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
               <option value="">Category</option>
               <option>Quantum Photonics</option>
               <option>Integrated Photonics</option>
@@ -184,14 +184,14 @@ const Projects = () => {
               <option>Photovoltaics</option>
             </select>
 
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg min-w-[200px] focus:border-[#007bff] focus:outline-none">
+            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
               <option value="">Timeline</option>
               <option>2024</option>
               <option>2023</option>
               <option>2022</option>
             </select>
 
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg min-w-[200px] focus:border-[#007bff] focus:outline-none">
+            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
               <option value="">Impact Area</option>
               <option>Healthcare</option>
               <option>Environment</option>
@@ -202,7 +202,7 @@ const Projects = () => {
         </div>
 
         {/* Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-7 max-w-[1100px] mx-auto my-10 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 max-w-[1100px] mx-auto my-10 px-4">
           <div className="bg-[#f7f7f7] p-9 rounded-xl shadow-md hover:-translate-y-1 transition cursor-pointer">
             <FaAtom className="text-[2rem] text-[#f57c00] mb-2 mx-auto" />
             <span className="font-semibold text-[#333]">Quantum Photonics</span>
@@ -229,7 +229,7 @@ const Projects = () => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[1200px] mx-auto mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 max-w-[1200px] mx-auto mt-12 px-4">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -248,7 +248,7 @@ const Projects = () => {
               </div>
 
               {/* Content Section */}
-              <div className="p-8 text-center">
+              <div className="p-6 sm:p-8 text-center">
                 {/* Title */}
                 <h3 className="text-2xl font-bold tracking-wide mb-2">
                   {project.title}
@@ -308,7 +308,7 @@ const Projects = () => {
       {/* FEATURED PROJECTS */}
       <section className="py-20 bg-gradient-to-br from-[#f8f9fa] to-white text-center">
         <div className="max-w-[1300px] mx-auto px-6">
-          <h2 className="text-[2.5rem] font-bold text-[#003b5c] mb-14 tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] font-bold text-[#003b5c] mb-10 md:mb-14 tracking-wide">
             FEATURED PROJECTS
           </h2>
 
@@ -341,10 +341,7 @@ const Projects = () => {
                 {groupedSlides.map((group, slideIndex) => (
                   <div key={slideIndex} className="min-w-full flex">
                     {group.map((project, index) => (
-                      <div
-                        key={index}
-                        className="w-full md:w-1/2 lg:w-1/3 px-4"
-                      >
+                      <div key={index} className="flex-1 px-4">
                         <div
                           className="bg-white rounded-3xl shadow-xl overflow-hidden 
                           transition duration-500 hover:shadow-2xl hover:-translate-y-2"
@@ -354,7 +351,7 @@ const Projects = () => {
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-[240px] object-cover transition duration-700 hover:scale-110"
+                              className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover transition duration-700 hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                           </div>
