@@ -54,7 +54,6 @@ const Header = () => {
                 { name: "Our Projects", path: "/projects" },
                 { name: "Membership", path: "/membership" },
                 { name: "Game", path: "/game" },
-                { name: "Gallery", path: "/gallery" },
               ].map((item, index) => (
                 <li key={index}>
                   <Link

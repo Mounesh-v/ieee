@@ -7,6 +7,14 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
+import yashwanth from "../assets/_EXECOM/5.png";
+import Prajna from "../assets/_EXECOM/6.png";
+import avinash from "../assets/_EXECOM/2.png";
+import aryan from "../assets/_EXECOM/4.png";
+import sumit from "../assets/_EXECOM/1.png";
+import kalanthika from "../assets/_EXECOM/7.png";
+import mounesh from "../assets/_EXECOM/3.jpeg";
+import anush from "../assets/_EXECOM/15.jpeg";
 
 const Execome = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,15 +25,6 @@ const Execome = () => {
   }, []);
 
   const facultyMembers = [
-    {
-      name: "Dr. Saneesh",
-      position: "Faculty Advisor",
-      department: "ECE",
-      photo: "/a.png",
-      email: "#",
-      linkedin: "#",
-      website: "#",
-    },
     {
       name: "Dr. Asha",
       position: "Co-Advisor",
@@ -39,26 +38,67 @@ const Execome = () => {
 
   const studentMembers = [
     {
-      name: "AMIT Patil",
+      name: "Yashvanth M",
       position: "Chairperson",
       department: "ECE",
-      photo: "/a.png",
+      photo: yashwanth,
       email: "#",
       linkedin: "https://www.linkedin.com/in/amit-patil-480773155",
     },
     {
-      name: "Abhishek V V",
+      name: "ANSHU SINGH",
       position: "Vice Chair",
+      department: "CSE",
+      photo: anush,
+      email: "anshusingh63761@gmail.com ",
+      linkedin:
+        "https://www.linkedin.com/in/anshu-singh-a11994330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      name: "Prajna Saha",
+      position: "Secretary",
       department: "ECE",
-      photo: "/a.png",
+      photo: Prajna,
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+    },
+    {
+      name: "K.Avinash",
+      position: "Joint Secretary",
+      department: "AIML",
+      photo: avinash,
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/amit-patil-480773155",
+    },
+    {
+      name: "Aryan Sujay",
+      position: "R&D Head",
+      department: "CSE",
+      photo: aryan,
       email: "#",
       linkedin: "https://www.linkedin.com/in/abhishek-v-v-09012b300",
     },
     {
-      name: "Varsha S Kundur",
-      position: "Secretary",
+      name: "SUMIT HIRAVE",
+      position: "Treasurer",
       department: "ECE",
-      photo: "/a.png",
+      photo: sumit,
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+    },
+    {
+      name: "S Kalanthika",
+      position: "Project Head",
+      department: "ECE",
+      photo: kalanthika,
+      email: "#",
+      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+    },
+    {
+      name: "MOUNESH V",
+      position: "Web Master",
+      department: "CSE",
+      photo: mounesh,
       email: "#",
       linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
     },
@@ -68,14 +108,13 @@ const Execome = () => {
     return (
       <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden max-w-sm mx-auto">
         {/* Image Section */}
-        <div className="w-auto h-72 overflow-hidden">
+        <div className="w-full aspect-[3/4] bg-gray-200 overflow-hidden">
           <img
             src={member.photo}
             alt={member.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
-
         {/* Content Section */}
         <div className="bg-[#F3F4F6] text-center px-6 py-8">
           <h3 className="text-2xl font-bold text-[#003B5C] mb-2">
@@ -90,7 +129,7 @@ const Execome = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6 text-2xl text-[#00629B]">
-            <a href={member.email}>
+            <a href={`mailto:${member.email}`}>
               <FaEnvelope className="hover:text-[#003B5C] transition" />
             </a>
 
@@ -148,10 +187,10 @@ const Execome = () => {
           Student Committee
         </h3>
         {/* Accent + Divider Line */}
-          <div className="relative mt-4">
-            <div className="w-full h-[2px] bg-gray-300"></div>
-            <div className="absolute top-0 left-0 w-24 h-[2px] bg-[#FF7D32]"></div>
-          </div>
+        <div className="relative mt-4">
+          <div className="w-full h-[2px] bg-gray-300"></div>
+          <div className="absolute top-0 left-0 w-24 h-[2px] bg-[#FF7D32]"></div>
+        </div>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {studentMembers.map((member, i) => (
             <MemberCard key={i} member={member} isFaculty={false} />

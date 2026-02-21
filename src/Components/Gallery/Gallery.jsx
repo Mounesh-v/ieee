@@ -70,26 +70,24 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="bg-[#F8F9FA] text-[#2D3748] font-sans min-h-screen">
-
+    <div className="text-[#2D3748] font-sans">
       {/*  HERO SECTION  */}
-      <section className="relative bg-[#003B5C] text-white py-[140px] overflow-hidden text-center">
-
+     <section className="relative bg-[#003B5C] text-white py-32 text-center -mt-9">
         {/* Moving Laser Line */}
         <div className="absolute top-0 left-[-10%] h-full w-[4px] bg-gradient-to-b from-transparent via-[#FF7D32] to-transparent blur-sm shadow-[0_0_20px_#FF7D32] animate-laser"></div>
 
-        <h2 className="text-[48px] font-bold drop-shadow-md">
+        <h2 className="text-[32px] md:text-[48px] font-bold drop-shadow-md">
           Photonics in Focus
         </h2>
         <p className="mt-6 text-[20px] max-w-[800px] mx-auto opacity-90">
-          Explore our collection of photonics research, events, and achievements through images.
+          Explore our collection of photonics research, events, and achievements
+          through images.
         </p>
       </section>
 
       {/*  GALLERY GRID  */}
       <div className="max-w-[1200px] mx-auto px-6 py-[70px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {galleryData.map((item) => (
             <div
               key={item.id}
@@ -105,17 +103,12 @@ const Gallery = () => {
 
                 {/* Bottom Gradient Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003B5C] via-[#003B5C]/80 to-transparent p-6 text-white">
-                  <h3 className="text-[18px] font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm opacity-90 mt-1">
-                    {item.date}
-                  </p>
+                  <h3 className="text-[18px] font-semibold">{item.title}</h3>
+                  <p className="text-sm opacity-90 mt-1">{item.date}</p>
                 </div>
               </div>
             </div>
           ))}
-
         </div>
       </div>
 
@@ -130,7 +123,6 @@ const Gallery = () => {
           animation: laserMove 6s linear infinite;
         }
       `}</style>
-
     </div>
   );
 };
