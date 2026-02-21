@@ -16,6 +16,7 @@ import LaserMazeGame from "./Components/Games/LaserMazeGame";
 import SpectrumRunner from "./Components/Games/spectrum-runner/SpectrumRunner";
 import PhotonicsWordle from "./Components/Games/PhotonicsWordle";
 import PhotonCatcher from "./Components/Games/PhotonCatcher";
+import LightSniper from "./Components/Games/LightSniper";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="laser" element={<LaserMazeGame />} />
         <Route path="spectrum" element={<SpectrumRunner />} />
         <Route path="wordle" element={<PhotonicsWordle />} />
+        <Route path="sniper" element={<LightSniper />} />
 
         <Route path="*" element={<NotFound />} />
 

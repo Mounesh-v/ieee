@@ -12,14 +12,13 @@ const Membership = () => {
           Join Our Photonics Community
         </h1>
         <p className="text-[22px] max-w-[900px] mx-auto opacity-90">
-          Become part of the IEEE Photonics Society at BMSIT&M and advance
-          your journey in light-based technologies
+          Become part of the IEEE Photonics Society at BMSIT&M and advance your
+          journey in light-based technologies
         </p>
       </section>
 
       {/* MAIN CONTAINER */}
       <div className="max-w-[1000px] mx-auto py-[60px] px-5 space-y-[60px]">
-
         {/* WHY JOIN */}
         <section className="bg-white rounded-lg p-10 shadow-sm border-t-4 border-[#FF7D32]">
           <h2 className="text-[32px] text-[#003B5C] font-semibold mb-6 relative">
@@ -27,7 +26,7 @@ const Membership = () => {
             <span className="block w-[60px] h-[3px] bg-[#FF7D32] mt-3 rounded"></span>
           </h2>
           <p className="text-[#4A5568] leading-relaxed text-[19px]">
-            Join the <strong>IEEE Photonics Club at BMSCE</strong> and become
+            Join the <strong>IEEE Photonics Club at BMSIT</strong> and become
             part of a dynamic community passionate about light-based
             technologies. As a member, you'll explore the world of photonics
             through workshops, hands-on projects, competitions, and exclusive
@@ -45,8 +44,8 @@ const Membership = () => {
 
           <ul className="space-y-4 pl-5 text-[#4A5568]">
             <li>
-              <strong>Eligibility:</strong> Open to all BMSIT students
-              (across all branches and semesters)
+              <strong>Eligibility:</strong> Open to all BMSIT students (across
+              all branches and semesters)
             </li>
             <li>
               <strong>Duration:</strong> Membership is valid for one academic
@@ -154,27 +153,36 @@ const Membership = () => {
 
           <div className="flex flex-wrap gap-6">
             <div className="flex-1 min-w-[250px] bg-[#E6F2FF] p-6 rounded-lg flex items-center gap-4">
-              <div className="text-2xl text-[#FF7D32]">📧</div>
-              <div>
-                <h3 className="text-[#003B5C] font-semibold">Email Us</h3>
-                <p className="text-[#00629B] font-medium">
-                  xyz@gmail.com
-                </p>
-              </div>
+              <a
+                href="mailto:ieeephotonicsbmsit@gmail.com"
+                className="flex-1 min-w-[250px] bg-[#E6F2FF] p-6 rounded-lg flex items-center gap-4 hover:shadow-md transition"
+              >
+                <div className="text-2xl text-[#FF7D32]">📧</div>
+                <div>
+                  <h3 className="text-[#003B5C] font-semibold">Email Us</h3>
+                  <p className="text-[#00629B] font-medium">
+                    ieeephotonicsbmsit@gmail.com
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div className="flex-1 min-w-[250px] bg-[#E6F2FF] p-6 rounded-lg flex items-center gap-4">
-              <div className="text-2xl text-[#FF7D32]">📞</div>
-              <div>
-                <h3 className="text-[#003B5C] font-semibold">Call Us</h3>
-                <p className="text-[#00629B] font-medium">
-                  Amit Patil (Chair) | 7338546301
-                </p>
-              </div>
+              <a
+                href="tel:+916363200613"
+                className="flex-1 min-w-[250px] bg-[#E6F2FF] p-6 rounded-lg flex items-center gap-4 hover:shadow-md transition"
+              >
+                <div className="text-2xl text-[#FF7D32]">📞</div>
+                <div>
+                  <h3 className="text-[#003B5C] font-semibold">Call Us</h3>
+                  <p className="text-[#00629B] font-medium">
+                    Yashvant M (Chair) | 6363200613
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
-
       </div>
     </div>
   );

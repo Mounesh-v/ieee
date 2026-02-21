@@ -19,7 +19,7 @@ const games = [
     image: light,
     description:
       "Navigate through mirrors and lenses using light refraction principles.",
-    link: "/game/light sniper/index.html",
+    link: "/sniper",
   },
   {
     title: "Spectrum Runner",

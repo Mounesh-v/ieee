@@ -59,48 +59,53 @@ const Execome = () => {
       position: "Secretary",
       department: "ECE",
       photo: Prajna,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+      email: "24ug1bycs192@bmsit.in ",
+      linkedin:
+        "https://www.linkedin.com/in/prajna-saha-36022932a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
       name: "K.Avinash",
       position: "Joint Secretary",
       department: "AIML",
       photo: avinash,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/amit-patil-480773155",
+      email: "avinashssnsantosh@gmail.com ",
+      linkedin:
+        "https://www.linkedin.com/in/k-avinash-72b07b360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "Aryan Sujay",
       position: "R&D Head",
       department: "CSE",
       photo: aryan,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/abhishek-v-v-09012b300",
+      email: "askuk4@gmail.com",
+      linkedin:
+        "https://www.linkedin.com/in/aryan-sujay-kumar-uk-220608357?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
       name: "SUMIT HIRAVE",
       position: "Treasurer",
-      department: "ECE",
+      department: "CSE",
       photo: sumit,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+      email: "sumithirave7@gmail.com ",
+      linkedin:
+        "https://www.linkedin.com/in/sumit-hirave-b7b2b5302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "S Kalanthika",
       position: "Project Head",
       department: "ECE",
       photo: kalanthika,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+      email: "kalanthika.srini@gmail.com",
+      linkedin:
+        "https://www.linkedin.com/in/s-kalanthika-85a36932b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
       name: "MOUNESH V",
       position: "Web Master",
       department: "CSE",
       photo: mounesh,
-      email: "#",
-      linkedin: "https://www.linkedin.com/in/varsha-s-kundur",
+      email: "mouneshv776@gmail.com",
+      linkedin: "https://www.linkedin.com/in/mounesh-v/",
     },
   ];
 
