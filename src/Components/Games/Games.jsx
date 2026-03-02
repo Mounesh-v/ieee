@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import laser from "../../assets/laser maze.png";
-import light from "../../assets/light siper.png";
-import wordle from "../../assets/wordle.png";
-import photon from "../../assets/photon catcher.png";
-import quiz from "../../assets/quiz.png";
-import run from "../../assets/run.png";
+import laser from "../../assets/Game/laser maze.png";
+import wordle from "../../assets/Game/wordle.png";
+import photon from "../../assets/Game/photon catcher.png";
+import quiz from "../../assets/Game/quiz.png";
+import run from "../../assets/Game/run.png";
 import { useNavigate } from "react-router-dom";
 
 const games = [
@@ -13,13 +12,6 @@ const games = [
     image: laser,
     description: "Align mirrors to guide your laser through complex mazes.",
     link: "/laser",
-  },
-  {
-    title: "Light Sniper",
-    image: light,
-    description:
-      "Navigate through mirrors and lenses using light refraction principles.",
-    link: "/sniper",
   },
   {
     title: "Spectrum Runner",

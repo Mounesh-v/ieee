@@ -1,65 +1,82 @@
 import React, { useEffect } from "react";
+import mit from "../../assets/Events/mit.png";
+import lasermaze from "../../assets/Events/lasermaze.png";
+import wop from "../../assets/Events/wop.png";
+import e1img1 from "../../assets/Events/event1/img1.jpeg";
+import e1img2 from "../../assets/Events/event1/img2.jpeg";
+import e1img3 from "../../assets/Events/event1/img3.jpeg";
+import e1img4 from "../../assets/Events/event1/img4.jpeg";
+import e1img5 from "../../assets/Events/event1/img5.jpeg";
+import e1img6 from "../../assets/Events/event1/img6.jpeg";
+
+import e2img1 from "../../assets/Events/event2/img1.jpeg";
+import e2img2 from "../../assets/Events/event2/img2.jpeg";
+import e2img3 from "../../assets/Events/event2/img3.jpeg";
+import e2img4 from "../../assets/Events/event2/img4.jpeg";
+import e2img5 from "../../assets/Events/event2/img5.jpeg";
+import e2img6 from "../../assets/Events/event2/img6.jpeg";
+import e2img7 from "../../assets/Events/event2/img7.jpeg";
+import e2img8 from "../../assets/Events/event2/img8.jpeg";
+import e2img9 from "../../assets/Events/event2/img9.jpeg";
+import e2img10 from "../../assets/Events/event2/img10.jpeg";
+import e2img11 from "../../assets/Events/event2/img11.jpeg";
+import e2img12 from "../../assets/Events/event2/img12.jpeg";
 
 const galleryData = [
   {
     id: 1,
-    title: "Annual Photonics Conference 2023",
-    description:
-      "Our members presenting research at the flagship IEEE Photonics Conference in Orlando.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
-    category: "events",
-    date: "November 12, 2023",
+    title: "Comsif Event",
+    date: "March 2025",
+    images: [e1img1, e1img2, e1img3, e1img4, e1img5, e1img6],
   },
   {
     id: 2,
-    title: "Laser Lab Demonstration",
+    title: "Spark Trail ",
+    date: "April 2025",
+    images: [
+      e2img1,
+      e2img2,
+      e2img3,
+      e2img4,
+      e2img5,
+      e2img6,
+      e2img7,
+      e2img8,
+      e2img9,
+      e2img10,
+      e2img11,
+      e2img12,
+    ],
+  },
+];
+
+const eventsData = [
+  {
+    id: 1,
+    title: "MIT Photonics Workshop",
+    description:
+      "Our members presenting research at the flagship IEEE Photonics Conference in Orlando.",
+    imageUrl: mit,
+    category: "events",
+    date: "November 12, 2024",
+  },
+  {
+    id: 2,
+    title: "Laser Maze",
     description:
       "Students experimenting with cutting-edge laser technology in our research lab.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80",
+    imageUrl: lasermaze,
     category: "research",
-    date: "October 5, 2023",
+    date: "December 20, 2024",
   },
   {
     id: 3,
-    title: "Student Chapter Meetup",
+    title: "WOP",
     description:
       "Monthly meetup of our student chapter members discussing photonics applications.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    imageUrl: wop,
     category: "members",
-    date: "September 18, 2023",
-  },
-  {
-    id: 4,
-    title: "Best Paper Award",
-    description:
-      "Our team receiving the Best Paper Award for research in quantum photonics.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=800&q=80",
-    category: "awards",
-    date: "August 22, 2023",
-  },
-  {
-    id: 5,
-    title: "Optical Fiber Workshop",
-    description:
-      "Hands-on workshop on optical fiber technology for undergraduate students.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80",
-    category: "events",
-    date: "July 15, 2023",
-  },
-  {
-    id: 6,
-    title: "Photonics Summer Camp",
-    description:
-      "High school students learning about photonics through interactive experiments.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
-    category: "events",
-    date: "June 30, 2023",
+    date: "December 20 2024",
   },
 ];
 
@@ -71,12 +88,49 @@ const Gallery = () => {
 
   return (
     <div className="text-[#2D3748] font-sans">
-      
-
       {/*  GALLERY GRID  */}
       <div className="max-w-[1200px] mx-auto px-6 py-[70px]">
+        {galleryData.map((event) => (
+          <div key={event.id} className="mb-14">
+            {/* Event Title */}
+            <h2 className="text-2xl font-bold mb-6">
+              {event.title} - {event.date}
+            </h2>
+
+            {/* Images Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {event.images.map((img, index) => (
+                <div
+                  key={index}
+                  className="relative rounded-xl overflow-hidden shadow-md bg-white transition duration-500 hover:-translate-y-2 hover:shadow-xl group"
+                >
+                  <div className="relative h-[260px] overflow-hidden">
+                    <img
+                      src={img}
+                      alt={event.title}
+                      className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                    />
+
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#003B5C] via-[#003B5C]/80 to-transparent p-6 text-white">
+                      <h3 className="text-[18px] font-semibold">
+                        {event.title}
+                      </h3>
+                      <p className="text-sm opacity-90 mt-1">{event.date}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+        <h2 className="text-3xl text-center font-bold mb-6">
+          Other Events
+        </h2>
+      <div className="max-w-[1200px] mx-auto px-6 py-[70px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryData.map((item) => (
+          {eventsData.map((item) => (
             <div
               key={item.id}
               className="relative rounded-xl overflow-hidden shadow-md bg-white transition duration-500 hover:-translate-y-2 hover:shadow-xl group"

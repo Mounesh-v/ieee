@@ -5,8 +5,25 @@ import { Link } from "react-router-dom";
 import heroImage from "../../public/image2.png";
 
 const Home = () => {
-  
   const [newsData, setNewsData] = useState([]);
+
+  const featuredPrograms = [
+    {
+      title: "Upcoming Conferences",
+      img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop",
+      text: "Discover our premier photonics conferences and events worldwide.",
+    },
+    {
+      title: "Leading Publications",
+      img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop",
+      text: "Access high-impact journals and magazines in photonics and optics.",
+    },
+    {
+      title: "Educational Resources",
+      img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+      text: "Explore webinars, tutorials, and learning materials for all levels.",
+    },
+  ];
 
   useEffect(() => {
     setNewsData([
@@ -34,12 +51,8 @@ const Home = () => {
     ]);
   }, []);
 
-  
-
   return (
     <>
-      
-
       {/*  HERO  */}
       <section
         className="
@@ -128,23 +141,7 @@ const Home = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] mb-[50px]">
-          {[
-            {
-              title: "Upcoming Conferences",
-              img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop",
-              text: "Discover our premier photonics conferences and events worldwide.",
-            },
-            {
-              title: "Leading Publications",
-              img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop",
-              text: "Access high-impact journals and magazines in photonics and optics.",
-            },
-            {
-              title: "Educational Resources",
-              img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
-              text: "Explore webinars, tutorials, and learning materials for all levels.",
-            },
-          ].map((card, index) => (
+          {featuredPrograms.map((card, index) => (
             <div
               key={index}
               className="group bg-white border border-[rgba(0,59,92,0.1)] rounded-[8px] overflow-hidden transition-all duration-300 shadow-sm h-[400px] hover:-translate-y-[10px] hover:shadow-lg hover:border-[rgba(0,98,155,0.2)]"
@@ -253,7 +250,6 @@ const Home = () => {
       </section>
 
       {/*  FOOTER  */}
-      
     </>
   );
 };
