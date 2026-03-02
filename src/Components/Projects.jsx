@@ -19,30 +19,6 @@ const Projects = () => {
 
   const featuredProjects = [
     {
-      title: "Quantum Secure Communication",
-      description:
-        "Developing a tamper-proof photonic communication system using quantum entanglement.",
-      status: "Completed",
-      image:
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Smart Optical Sensor",
-      description:
-        "Multi-wavelength sensor for real-time air quality and pollution tracking.",
-      status: "Active",
-      image:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "Photonics AI Interface",
-      description:
-        "AI-powered optical detection system for intelligent imaging.",
-      status: "Active",
-      image:
-        "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
       title: "Laser Medical Scanner",
       description:
         "High precision medical scanning using advanced laser optics.",
@@ -63,47 +39,6 @@ const Projects = () => {
       status: "Completed",
       image:
         "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
-    },
-  ];
-
-  const projects = [
-    {
-      title: "Smart Traffic Light System",
-      timeframe: "2023–2024",
-      description:
-        "A responsive traffic control system using IoT sensors and real-time data to improve city traffic flow.",
-      investigators: "Ananya R, Ravi Kumar",
-      image:
-        "https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=1200&q=80",
-      sponsors: [
-        {
-          name: "IEEE",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg",
-        },
-        {
-          name: "BMSIT",
-          logo: "https://upload.wikimedia.org/wikipedia/en/6/65/B.M.S._Institute_of_Technology_and_Management_logo.png",
-        },
-      ],
-    },
-    {
-      title: "Wearable Biophotonics Sensor",
-      timeframe: "2024",
-      description:
-        "This device tracks blood oxygenation using photonic sensors and provides real-time health metrics.",
-      investigators: "Neha M, Abhay Singh",
-      image:
-        "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80",
-      sponsors: [
-        {
-          name: "Photonics Society",
-          logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMLxjTFkH6Zuzkubu8iIDl561KLBdIua6S1jYhZDtD5C01JQN_VRfQ703eemIG3wUPuxNbsE_pFck2qKcoDQIcoy0&s&ec=121528441",
-        },
-        {
-          name: "MIT",
-          logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg",
-        },
-      ],
     },
   ];
 
@@ -166,39 +101,6 @@ const Projects = () => {
           <p className="text-[#555] mb-8 text-base sm:text-lg">
             Explore the innovative works driven by our student community.
           </p>
-
-          {/* Controls */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 items-center">
-            <input
-              type="text"
-              placeholder="Search projects..."
-              className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none"
-            />
-
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
-              <option value="">Category</option>
-              <option>Quantum Photonics</option>
-              <option>Integrated Photonics</option>
-              <option>Biophotonics</option>
-              <option>Optical Communications</option>
-              <option>Photovoltaics</option>
-            </select>
-
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
-              <option value="">Timeline</option>
-              <option>2024</option>
-              <option>2023</option>
-              <option>2022</option>
-            </select>
-
-            <select className="px-4 py-2 border border-[#ccc] bg-white text-[#2d3748] rounded-lg w-full sm:min-w-[200px] sm:w-auto focus:border-[#007bff] focus:outline-none">
-              <option value="">Impact Area</option>
-              <option>Healthcare</option>
-              <option>Environment</option>
-              <option>Communication</option>
-              <option>Energy</option>
-            </select>
-          </div>
         </div>
 
         {/* Category Cards */}
@@ -228,81 +130,6 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 max-w-[1200px] mx-auto mt-12 px-4">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white text-black rounded-3xl shadow-2xl overflow-hidden group transition duration-500 hover:scale-[1.015] hover:shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
-            >
-              {/* Image Section */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-[240px] object-cover transition duration-700 group-hover:scale-110"
-                />
-
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              </div>
-
-              {/* Content Section */}
-              <div className="p-6 sm:p-8 text-center">
-                {/* Title */}
-                <h3 className="text-2xl font-bold tracking-wide mb-2">
-                  {project.title}
-                  <span className="text-black text-lg ml-2 font-medium">
-                    ({project.timeframe})
-                  </span>
-                </h3>
-
-                {/* Divider */}
-                <div className="w-16 h-[3px] bg-gradient-to-r from-[#003b5c] to-[#00629b] mx-auto mb-6 rounded-full"></div>
-
-                {/* Description */}
-                <p className="text-black leading-relaxed mb-6 text-[15px]">
-                  {project.description}
-                </p>
-
-                {/* Investigators */}
-                <p className="mb-8 text-[15px]">
-                  <span className="font-semibold text-black">
-                    Investigators:
-                  </span>{" "}
-                  <span className="text-black">{project.investigators}</span>
-                </p>
-
-                {/* Sponsors */}
-                <h4 className="text-lg font-semibold mb-4 tracking-wide">
-                  Sponsors
-                </h4>
-
-                <div className="flex justify-center items-center gap-10 mb-8 flex-wrap">
-                  {project.sponsors.map((sponsor, i) => (
-                    <div key={i} className="flex flex-col items-center group">
-                      <div className="bg-white rounded-lg p-2 shadow-md transition group-hover:shadow-lg">
-                        <img
-                          src={sponsor.logo}
-                          alt={sponsor.name}
-                          className="h-10 w-auto object-contain"
-                        />
-                      </div>
-                      <span className="text-sm text-[#b0b0b0] mt-2">
-                        {sponsor.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Button */}
-                <button className="px-10 py-3 text-white bg-[#003b5c] to-[#00629b] rounded-xl font-semibold tracking-wide shadow-lg transition duration-300 hover:shadow-[0_8px_20px_rgba(0,98,155,0.6)] hover:-translate-y-1">
-                  Read More
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* FEATURED PROJECTS */}
