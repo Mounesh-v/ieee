@@ -15,20 +15,27 @@ const Events = () => {
     },
     {
       id: 2,
+      title: "comsif",
+      date: "13-14 feb, 2026",
+      description:
+        "COMSIF is an event where students explore innovations in photonics, optical communication, and light-based technologies.",
+    },
+    {
+      id: 3,
       title: "Spark Trail 2.0 ",
       date: "April 2026",
       description:
         "A photonics-based treasure hunt event focused on optics concepts and interactive problem-solving.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Photonics Hackathon",
       date: "August, 2025",
       description:
         "A hands-on innovation event where participants develop solutions related to optics, electronics, and communication systems.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Photonics Workshop ",
       date: "November, 2025",
       description:

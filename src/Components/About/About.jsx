@@ -29,60 +29,16 @@ const About = () => {
 
   return (
     <>
-      {/* ================= HEADER ================= */}
-      {/* <header>
-        <div className="header-container">
-          <div className="logo">
-            <img src={logo} alt="IEEE Photonics Society Logo" />
-            <div className="logo-text">
-              <h1>IEEE Photonics BMSIT&M</h1>
-              <p>Advancing the science and technology of light</p>
-            </div>
-          </div>
-
-          <nav className={isMenuOpen ? "active" : ""}>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/execome">Execome</Link>
-              </li>
-              <li>
-                <Link to="/events">Events</Link>
-              </li>
-              <li>
-                <Link to="/projects">Our Projects</Link>
-              </li>
-              <li>
-                <Link to="/membership">Membership</Link>
-              </li>
-              <li>
-                <Link to="/game">Game</Link>
-              </li>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            ☰
-          </button>
-        </div>
-      </header> */}
-
       {/* ================= HERO ================= */}
       <section className="hero">
         <div className="hero-content">
           <h2>About IEEE Photonics</h2>
           <p>Empowering Innovation in Light-Based Technologies</p>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </section>
 

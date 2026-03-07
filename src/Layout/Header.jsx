@@ -22,11 +22,11 @@ const Header = () => {
             />
 
             <div className="hidden sm:block">
-              <h1 className="text-[24px] text-[#003B5C] font-bold tracking-[-0.5px]">
+              <h1 className="text-[20px] text-[#003B5C] font-bold tracking-[-0.5px]">
                 IEEE Photonics BMSIT&M
               </h1>
 
-              <p className="text-[14px] text-[#4A5568] font-medium">
+              <p className="text-[10px] text-[#4A5568] font-medium">
                 Advancing the science and technology of light
               </p>
             </div>
@@ -49,11 +49,11 @@ const Header = () => {
               {[
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
-                { name: "Execom", path: "/execome" },
+                { name: "Our Team", path: "/our-team" },
                 { name: "Events", path: "/events" },
                 { name: "Our Projects", path: "/projects" },
                 { name: "Membership", path: "/membership" },
-                { name: "Game", path: "/game" },
+                { name: "Games", path: "/game" },
               ].map((item, index) => (
                 <li key={index}>
                   <Link

@@ -15,27 +15,14 @@ import sumit from "../assets/_EXECOM/1.png";
 import kalanthika from "../assets/_EXECOM/7.png";
 import mounesh from "../assets/_EXECOM/3.jpeg";
 import anush from "../assets/_EXECOM/15.jpeg";
-import Volcom from "./Volcom";
 
-const Execome = () => {
+const Volcom = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [year, setYear] = useState("");
 
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
-
-  const facultyMembers = [
-    {
-      name: "Dr. Asha",
-      position: "Co-Advisor",
-      department: "ECE",
-      photo: "/a.png",
-      email: "#",
-      linkedin: "#",
-      website: "#",
-    },
-  ];
 
   const studentMembers = [
     {
@@ -169,24 +156,6 @@ const Execome = () => {
           </p>
         </div>
 
-        {/* Faculty */}
-        <div className="mb-10">
-          <h3 className="text-3xl flex font-bold text-[#003B5C]">
-            Faculty Advisors
-          </h3>
-
-          {/* Accent + Divider Line */}
-          <div className="relative mt-4">
-            <div className="w-full h-[2px] bg-gray-300"></div>
-            <div className="absolute top-0 left-0 w-24 h-[2px] bg-[#FF7D32]"></div>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-16">
-          {facultyMembers.map((member, i) => (
-            <MemberCard key={i} member={member} isFaculty={true} />
-          ))}
-        </div>
 
         {/* Students */}
         <h3 className="text-3xl flex font-bold text-[#003B5C]">
@@ -203,72 +172,10 @@ const Execome = () => {
           ))}
         </div>
       </section>
-      <Volcom/>
 
-      {/* Membership CTA */}
-      <section className="py-20 px-6 bg-[#F8F9FA]">
-        <div className="max-w-6xl mx-auto bg-[#F3F4F6] rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-          {/* Left Content */}
-          <div className="flex-1 p-12">
-            <h2 className="text-4xl font-bold text-[#003B5C] mb-6">
-              Join Our Chapter
-            </h2>
-
-            <p className="text-[#4A5568] mb-8 text-lg">
-              Become part of our vibrant photonics community and access
-              exclusive benefits:
-            </p>
-
-            <ul className="space-y-6 mb-10">
-              <li className="flex items-center gap-4 text-[#2D3748] text-lg">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF7D32] text-white text-sm">
-                  <IoMdCheckmark />
-                </span>
-                Technical workshops & seminars
-              </li>
-
-              <li className="flex items-center gap-4 text-[#2D3748] text-lg">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF7D32] text-white text-sm">
-                  <IoMdCheckmark />
-                </span>
-                Networking opportunities
-              </li>
-
-              <li className="flex items-center gap-4 text-[#2D3748] text-lg">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF7D32] text-white text-sm">
-                  <IoMdCheckmark />
-                </span>
-                Research collaborations
-              </li>
-
-              <li className="flex items-center gap-4 text-[#2D3748] text-lg">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF7D32] text-white text-sm">
-                  <IoMdCheckmark />
-                </span>
-                Professional development
-              </li>
-            </ul>
-
-            <a
-              href="https://www.ieee.org/membership/join/index.html"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-white bg-[linear-gradient(135deg,#F47A33_0%,#A8765C_50%,#1F6B96_100%)] 
-                   shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              Join Now →
-            </a>
-          </div>
-
-          {/* Right Gradient Panel */}
-          <div
-            className="hidden md:block w-1/3 
-  bg-[linear-gradient(135deg,#F47A33_0%,#A8765C_50%,#1F6B96_100%)]"
-          ></div>
-        </div>
-      </section>
+     
     </div>
   );
 };
 
-export default Execome;
+export default Volcom;

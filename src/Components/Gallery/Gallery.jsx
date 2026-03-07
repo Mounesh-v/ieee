@@ -88,8 +88,11 @@ const Gallery = () => {
 
   return (
     <div className="text-[#2D3748] font-sans">
+      <h1 className="text-3xl font-bold text-center mb-6">Gallery</h1>
+      {/* orange color line */}
+      <div className="h-1 bg-[#FF7D32] mx-auto max-w-[120px]  mb-2"></div>
       {/*  GALLERY GRID  */}
-      <div className="max-w-[1200px] mx-auto px-6 py-[70px]">
+      <div className="max-w-[1200px] mx-auto px-6 py-[10px]">
         {galleryData.map((event) => (
           <div key={event.id} className="mb-14">
             {/* Event Title */}
