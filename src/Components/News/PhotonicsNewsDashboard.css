@@ -1,0 +1,219 @@
+.photonics-news-dashboard {
+  padding: 3rem 1.5rem;
+  background: #f8fafc;
+  color: #1f2933;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.pnd-header {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.pnd-title {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #003b5c;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.pnd-subtitle {
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+.pnd-controls {
+  max-width: 1120px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pnd-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pnd-search-input:focus {
+  outline: none;
+  border-color: #00629b;
+  box-shadow: 0 0 0 3px rgba(0, 98, 155, 0.16);
+}
+
+.pnd-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pnd-category-button {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+.pnd-category-button:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.pnd-category-button--active {
+  background: linear-gradient(135deg, #003b5c, #00629b);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 10px 18px rgba(0, 59, 92, 0.35);
+}
+
+.pnd-status {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  text-align: center;
+  background-color: #e5f3fb;
+  color: #003b5c;
+}
+
+.pnd-status--loading {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.pnd-status--error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.pnd-grid {
+  max-width: 1120px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .pnd-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .pnd-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.pnd-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, translate 0.2s ease;
+}
+
+.pnd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+.pnd-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.pnd-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pnd-card:hover .pnd-card-image {
+  transform: scale(1.06);
+}
+
+.pnd-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pnd-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.pnd-card-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.pnd-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.pnd-card-source {
+  font-weight: 600;
+  color: #00629b;
+}
+
+.pnd-card-date {
+  font-style: italic;
+}
+
+.pnd-card-button {
+  align-self: flex-start;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #003b5c, #00629b);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(0, 59, 92, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.pnd-card-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(0, 59, 92, 0.55);
+  filter: brightness(1.03);
+}
+
+.pnd-card-button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(0, 59, 92, 0.4);
+}
+
